@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+//import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -13,7 +13,10 @@ import { MinhaPaginaPage } from '../pages/minha-pagina/minha-pagina';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    //devo remover o HomePage, pois estou trabalhando ele como Lazy Loading, e não posso chamar em dois lugares.
+    //caso contrário, ao ser chamado aqui, não seria feito a chamada sob demanda pois aqui já iria abrir
+    //irei comentar apenas como forma de aprendizagem. Mas, ao aprender irei remover.
+    //HomePage,
     ListPage,
     MinhaPaginaPage
   ],
@@ -24,7 +27,7 @@ import { MinhaPaginaPage } from '../pages/minha-pagina/minha-pagina';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    //HomePage,
     ListPage,
     MinhaPaginaPage
   ],

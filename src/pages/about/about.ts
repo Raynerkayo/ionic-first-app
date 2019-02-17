@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Segment } from 'ionic-angular';
 
 /**
  * Generated class for the AboutPage page.
@@ -8,7 +8,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+ /**
+  * Aqui vou mandar os metadados. E posso modificar os nomes.
+  */
+@IonicPage({
+  //se eu mudar aqui o name, eu devo mudar tbm no home.ts
+  name: 'about-page',
+  //segment é para criar uma url com o nome que eu quiser. Carregando um id.
+  segment: 'custom-about/:id',
+
+  //usar para manter a seta de voltar. E tbm devo agora utilizar lazy loadin na minha home.
+  defaultHistory: ['HomePage']
+})
+
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html',
@@ -19,7 +31,8 @@ export class AboutPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AboutPage');
+    //pego o 'id' que eu coloquei como parametro no home.ts
+    console.log('Identificador: ' + this.navParams.get('id'));
   }
 
 }
