@@ -1,2 +1,5 @@
 Não irei utilizar o preload, pois precisa ser usuário PRO do ionic.
 Tem como fazer sem ser PRO, mas não é interessante.
+
+**Habilitando o html5 mode**
+Deve ser feito o uso de injeção de dependencias do angular.
