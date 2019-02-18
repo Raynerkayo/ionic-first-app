@@ -1,0 +1,35 @@
+Não irei utilizar o preload, pois precisa ser usuário PRO do ionic.
+Tem como fazer sem ser PRO, mas não é interessante.
+
+**Habilitando o html5 mode**
+Deve ser feito o uso de injeção de dependencias do angular.
+
+**page vs fragment**
+Posso utilizar o componente box para estilizar o que eu quero
+apresentar e então chamar em alguma pagina.
+
+Preciso registrar o meu componente na minha aplicação,
+então irei registrar em app-> app.module.ts -> declarations.
+E vale ressaltar que no declarations só posso declarar ele no declarations;
+POis ele é um component, e só posso adicionar se for component, binds, directives, paginas.
+Sendo que as página preciso declarar tbm no entryComponents, para serem criadas de forma
+dinâmica pelo sistema de páginas do ionic.
+
+--decorator é feito no @Component do arquivo de page.
+
+#pages vs components
+possuem a mesma estrutura. O que diferencia será mostrado abaixo.
+
+#page
+é uma view completa.
+
+#components
+ficam dentro de paginas. são bloco de código que posso inserir em várias páginas. E aqui eu chamei de Box.
+para criar um component por linha de comando é:
+"ionic generate component box" sem usar "" : )
+
+
+
+
+
+

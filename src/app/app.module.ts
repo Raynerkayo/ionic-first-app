@@ -10,10 +10,12 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MinhaPaginaPage } from '../pages/minha-pagina/minha-pagina';
+import { BoxComponent } from '../components/box/box';
 
 
 @NgModule({
   declarations: [
+    BoxComponent,
     MyApp,
     //devo remover o HomePage, pois estou trabalhando ele como Lazy Loading, e não posso chamar em dois lugares.
     //caso contrário, ao ser chamado aqui, não seria feito a chamada sob demanda pois aqui já iria abrir

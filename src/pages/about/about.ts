@@ -18,6 +18,7 @@ import { IonicPage, NavController, NavParams, Segment } from 'ionic-angular';
   segment: 'custom-about/:id',
 
   //usar para manter a seta de voltar. E tbm devo agora utilizar lazy loadin na minha home.
+  //vai ser home.module.ts
   defaultHistory: ['HomePage']
 })
 
